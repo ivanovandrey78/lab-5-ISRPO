@@ -12,8 +12,6 @@ def area(a):
         >>> area(5)
         25
     """
-    if a < 0:
-        raise ValueError("Side cannot be negative")
     return a * a
 
 def perimeter(a):
@@ -30,6 +28,4 @@ def perimeter(a):
         >>> perimeter(5)
         20
     """
-    if a < 0:
-        raise ValueError("Side cannot be negative")
     return 4 * a
