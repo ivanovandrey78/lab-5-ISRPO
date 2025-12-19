@@ -21,8 +21,6 @@ jobs:
       # 2. Install Python on local machine
       - name: Set up Python
         uses: actions/setup-python@v5
-        with:
-          architecture: 'x64'
 
       #3. Run your unit tests with unittest
       - name: Run unit tests
