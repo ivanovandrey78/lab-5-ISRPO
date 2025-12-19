@@ -59,4 +59,4 @@ jobs:
 
 Скриншот выполненой работы:
 
-![Отчёт](./screenshots/photo_2025-12-19_15-54-07.jpg)
+![Отчёт](C:\Users\1\Desktop\lab-5-ISRPO\screenshots\photo_2025-12-19_16-28-39.jpg)
