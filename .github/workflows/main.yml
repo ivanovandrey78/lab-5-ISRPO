@@ -1,4 +1,4 @@
-name: Python Unit Tests CI
+name: Python Unittests CI
 
 on:
   push:
@@ -7,28 +7,24 @@ on:
 jobs:
   test:
     strategy:
-      # Матрица для запуска на двух ОС: Ubuntu и Windows
+      # ОС: Ubuntu и Windows
       matrix:
         os: [ubuntu-latest, windows-latest]
 
     runs-on: ${{ matrix.os }}
 
     steps:
-      # 1. Загружаем код из репозитория
+      # 1. Download the code from the repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Устанавливаем Python
+      # 2. Install Python on local machine
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'  # Автоматически выберет последнюю стабильную версию 3.x
+          python-version: '3.x'
           architecture: 'x64'
 
-      # 3. Выводим версию Python для проверки (опционально)
-      - name: Display Python version
-        run: python -c "import sys; print(sys.version)"
-
-      # 4. Запускаем ваши unit-тесты через unittest
+      #3. Run your unit tests with unittest
       - name: Run unit tests
         run: python -m unittest discover -s tests -p "test_*.py" -v
